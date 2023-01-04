@@ -203,10 +203,13 @@ public class MainActivity extends AppCompatActivity {
         // en caso de que no tenga accin
         TextView textViewResultado = (TextView) findViewById(R.id.textViewResultado);
         if(accion==""){
-            //añadira el valor numerico del String a la variable numerica
-            ResultadoNumerico=Double.parseDouble(ResultadoTexto.toString());
-            //ademas su simbulo aparecera en pantalla junto con el valor anterrion
-            mostrarResultAcc(textViewResultado,Btn,"suma");
+            if(textViewResultado.getText().equals("")){
+            }else {
+                //añadira el valor numerico del String a la variable numerica
+                ResultadoNumerico = Double.parseDouble(ResultadoTexto.toString());
+                //ademas su simbulo aparecera en pantalla junto con el valor anterrion
+                mostrarResultAcc(textViewResultado, Btn, "suma");
+            }
         }else{
             igual();
             mostrarResultAcc(textViewResultado,Btn,"suma");
@@ -234,10 +237,13 @@ public class MainActivity extends AppCompatActivity {
         TextView textViewResultado = (TextView) findViewById(R.id.textViewResultado);
         // en caso de que no tenga accin
         if(accion==""){
-            //añadira el valor numerico del String a la variable numerica
-            ResultadoNumerico= Double.parseDouble(ResultadoTexto.toString());
-            //ademas su simbulo aparecera en pantalla junto con el valor anterrion
-            mostrarResultAcc(textViewResultado,Btn,"division");
+            if(textViewResultado.getText().equals("")){
+            }else {
+                //añadira el valor numerico del String a la variable numerica
+                ResultadoNumerico = Double.parseDouble(ResultadoTexto.toString());
+                //ademas su simbulo aparecera en pantalla junto con el valor anterrion
+                mostrarResultAcc(textViewResultado, Btn, "division");
+            }
         }else{
             igual();
             mostrarResultAcc(textViewResultado,Btn,"division");
